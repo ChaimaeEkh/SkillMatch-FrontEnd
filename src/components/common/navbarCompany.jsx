@@ -44,16 +44,16 @@ const NavbarCandidate = () => {
               onMouseEnter={() => setIsTrainingOpen(true)}
               onMouseLeave={() => setIsTrainingOpen(false)}
             >
-              <span>Training <i className="dropdown-icon">▼</i></span>
+              <span>Tests <i className="dropdown-icon">▼</i></span>
               {isTrainingOpen && (
                 <div className="dropdown-menu">
                   <a href="/training/start" className="dropdown-item">
                     <i className="menu-icon start-icon"></i>
-                    Start training
+                    Create new Test
                   </a>
                   <a href="/training/challenges" className="dropdown-item">
                     <i className="menu-icon challenge-icon"></i>
-                    Challenges
+                    Tests
                   </a>
                 </div>
               )}
@@ -65,16 +65,20 @@ const NavbarCandidate = () => {
               onMouseEnter={() => setIsCompanyOpen(true)}
               onMouseLeave={() => setIsCompanyOpen(false)}
             >
-              <span>Company <i className="dropdown-icon">▼</i></span>
+              <span>Candidate <i className="dropdown-icon">▼</i></span>
               {isCompanyOpen && (
                 <div className="dropdown-menu">
-                  <a href="/companies/list" className="dropdown-item">
+                  <a href="/candidates/list" className="dropdown-item">
                     <i className="menu-icon company-list-icon"></i>
-                    Companies list
+                    Candidate list
                   </a>
-                  <a href="/companies/related" className="dropdown-item">
+                  <a href="/candidates/related" className="dropdown-item">
                     <i className="menu-icon company-related-icon"></i>
-                    Companies related
+                    Candidate Filter
+                  </a>
+                  <a href="/candidates/related" className="dropdown-item">
+                    <i className="menu-icon company-related-icon"></i>
+                    Candidate Selected
                   </a>
                 </div>
               )}
@@ -122,13 +126,9 @@ const NavbarCandidate = () => {
                       <i className="option-icon settings-icon"></i>
                       Settings
                     </a>
-                    <a href="/performance" className="profile-option">
+                    <a href="/dashboard" className="profile-option">
                       <i className="option-icon performance-icon"></i>
-                      Performance
-                    </a>
-                    <a href="/history" className="profile-option">
-                      <i className="option-icon history-icon"></i>
-                      Historique
+                      Dashboard
                     </a>
                     <a href="/support" className="profile-option">
                       <i className="option-icon support-icon"></i>
